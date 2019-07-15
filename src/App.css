@@ -31,10 +31,17 @@ a {
   height: 30px;
   width: 360px;
   font-size: 16px;
-  padding: 0 6px;
   border-radius: 2px;
   border: 1px solid rgb(160, 160, 160);
   font-family: sans-serif;
+  outline: none;
+  padding: 3px 0px 3px 6px;
+  margin: 5px 1px 3px 0px;
+}
+
+.search-bar:focus {
+  border: 2px solid #437ff5;
+  margin: 4px 0px 3px -1px;
 }
 
 .results {
@@ -75,4 +82,6 @@ a {
 
 .loading {
   align-self: center;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(80, 80, 80);
 }
