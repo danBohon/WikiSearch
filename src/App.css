@@ -6,7 +6,7 @@ a {
 .App {
   display: flex;
   flex-direction: column;
-  padding: 36px 0;
+  padding: 36px 0 0;
 }
 
 .logo-image {
@@ -89,6 +89,7 @@ a {
   align-self: center;
   font-family: "Courier New", Courier, monospace;
   color: rgb(80, 80, 80);
+  padding-bottom: 14px;
 }
 
 .footer {
