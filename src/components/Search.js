@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Results from "./Results";
+import Footer from "./Footer";
 
 export default function Search() {
   const [searchWord, setSearchWord] = useState("");
@@ -16,12 +17,14 @@ export default function Search() {
   });
 
   const handleScroll = () => {
-    if (
-      window.innerHeight + document.documentElement.scrollTop !==
-      document.documentElement.offsetHeight
-    )
-      return;
-    loadMore();
+    if (results[1]) {
+      if (
+        window.innerHeight + document.documentElement.scrollTop !==
+        document.documentElement.offsetHeight
+      )
+        return;
+      loadMore();
+    }
   };
 
   async function getResults(word, limitParam) {
@@ -53,7 +56,8 @@ export default function Search() {
         }}
       />
       <Results results={results} />
-      {loading ? <div className="loading">Loading...</div> : <div />}
+      {loading && <div className="loading">Loading...</div>}
+      {!results && <Footer />}
     </div>
   );
 }

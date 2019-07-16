@@ -9,6 +9,11 @@ a {
   padding: 36px 0;
 }
 
+.logo-image {
+  height: 180px;
+  padding: 24px;
+}
+
 .logo {
   align-self: center;
   font-size: 28px;
@@ -84,4 +89,13 @@ a {
   align-self: center;
   font-family: "Courier New", Courier, monospace;
   color: rgb(80, 80, 80);
+}
+
+.footer {
+  height: calc(100vh - 368px);
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 12px;
 }
